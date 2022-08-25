@@ -2,8 +2,8 @@
 8/24/2022  
 IT FDN 110 B  
 Assignment07*  
-https://github.com/hendej25/IntroToProg-Python-Mod07  
-https://hendej25.github.io/IntroToProg-Python-Mod07/  
+[https://github.com/hendej25/IntroToProg-Python-Mod07](https://github.com/hendej25/IntroToProg-Python-Mod07)
+[https://hendej25.github.io/IntroToProg-Python-Mod07/](https://hendej25.github.io/IntroToProg-Python-Mod07/)
 
 # Assignment 7 – Menu Script
 ## Introduction

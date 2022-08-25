@@ -24,35 +24,35 @@ In **Figure 2**, you can see how the pickle module is used to read in an entire 
 As I mentioned in the introduction section, the script for this assignment has been separated into 3 distinct layers. The Input / Output functions that display data to the user, or take in input from the user, are organized into a Class named “IO”. There are eight functions in all – of these, 2 just display data or choices to the user, while 6 are interactive in that they require some type of input from the user. 
 The interactive functions (names beginning with “input_”) return the user input via one or more variables. Within the main code body, these returned values are then handed off to one of the Processor-class functions as needed.
  
-![Figure 3](pictures/3 - IO - Functions.png "Figure 3")####  
+![Figure 3](pictures/3%20-%20IO%20-%20Functions.png "Figure 3")####  
 ***Figure 3* – There are 8 different static methods for handling interaction with the user**
 
 One of the areas in the script where error handling is used is inside the print_restaurant_menu function **(Figure 4)**. This function has the ability to sort the menu (which is a list object) by different characteristics of the items on the menu (which are Dictionary keys). However, if the function is passed sort keys that don’t actually correspond to the names of the Dictionary keys in the list, an exception will be raised – the user is notified of the error and no sort is applied.
  
-![Figure 4](pictures/4 - IO - Print Menu - Sort Exceptions.png "Figure 4")####  
+![Figure 4](pictures/4%20-%20IO%20-%20Print%20Menu%20-%20Sort%20Exceptions.png "Figure 4")####  
 ***Figure 4* - Raising an error if invalid sort keys are passed to the print_restaurant_menu function**
 
 ## Menu Script: Custom Error Classes
 The script also contains a few custom error classes for errors that are explicitly raised in the main code body section **(Figure 5)**:
  
-![Figure 5](pictures/5 - Custom Error Classes.png "Figure 5")####  
+![Figure 5](pictures/5%20-%20Custom%20Error%20Classes.png "Figure 5")####  
 ***Figure 5* – Custom error classes for better identification of custom errors**
 
 As you can see in **Figure 6**, these classes can be visually helpful for other individuals editing the code to see what the specific error being raised is related to:
 
-![Figure 6](pictures/6 - Custom Error Classes in action.png "Figure 6")####  
+![Figure 6](pictures/6%20-%20Custom%20Error%20Classes%20in%20action.png "Figure 6")####  
 ***Figure 6* – Using the custom error classes to raise errors in the main code body**
 
 ## Menu Script: Running the Script
 To test the script, I first ran the Assignment07.py file within PyCharm, using the latest available Python interpreter on my machine (Python 3.10). 
 You can see part of the script’s input / output in process in **Figure 7** below – I intentionally added a bug to the main code body to ask the menu to print on a key that wasn’t one of the Dictionary keys being used for the menu items, to show how the error handling would work. The user is notified of the issue, and the menu is printed with a default sort order (no sort) instead:
  
-![Figure 7](pictures/7 - Invalid Function Argument - Raising a Custom Error.png "Figure 7")####  
+![Figure 7](pictures/7%20-%20Invalid%20Function%20Argument%20-%20Raising%20a%20Custom%20Error.png "Figure 7")####  
 ***Figure 7* – Testing the error handling when a bug was intentionally added to the code**
 
 I also ran the script from the Windows Command Prompt window **(Figure 8)**. I verified that data from a previous run of the script was correctly picked up at the start of the program. 
  
-![Figure 8](pictures/8 - running the program in Command Prompt.png "Figure 8")####  
+![Figure 8](pictures/8%20-%20running%20the%20program%20in%20Command%20Prompt.png "Figure 8")####  
 ***Figure 8* – running the script from the Windows command prompt**
 
 ## Summary

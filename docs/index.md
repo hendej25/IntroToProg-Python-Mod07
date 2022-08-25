@@ -17,7 +17,7 @@ To accomplish the goals of this assignment, I created a class called PickleJuice
 
 In **Figure 2**, you can see how the pickle module is used to read in an entire list of Dictionary objects at once. Even though the load function only loads a single line at a time from the text file, and the menu list may contain multiple objects, the entire list is treated as if it were a single line – so there is no need to iterate through during the load process. Saving the data is equally simple, using the dump function.
  
- ![Figure 2](pictures/2 - Pickling + Unpickling.png "Figure 2")####  
+ ![Figure 2](pictures/2%20-%20Pickling%20%2B%20Unpickling.png "Figure 2")####  
 ***Figure 2* – Using the pickle.load() and pickle.dump() functions to read and write binary data**
 
 ## Menu Script: Input / Output

@@ -12,7 +12,7 @@ For this assignment, I worked to modify an existing script similar to the one th
 ## Menu Script: Processing Binary Data using Pickle
 To accomplish the goals of this assignment, I created a class called PickleJuice which performs the processing tasks. The functions that read / write data out to a flat *.dat file use the pickle module, since that data uses binary formatting; the other functions in this class modify data in the program’s memory.
  
-![Figure 1](pictures/1 - PickleJuice Class.png "Figure 1")#### 
+![Figure 1](/pictures/1 - PickleJuice Class.png "Figure 1")#### 
 ***Figure 1* – The processing layer of the script is organized into the PickleJuice class**
 
 In **Figure 2**, you can see how the pickle module is used to read in an entire list of Dictionary objects at once. Even though the load function only loads a single line at a time from the text file, and the menu list may contain multiple objects, the entire list is treated as if it were a single line – so there is no need to iterate through during the load process. Saving the data is equally simple, using the dump function.

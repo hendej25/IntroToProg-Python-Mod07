@@ -34,8 +34,19 @@ One of the areas in the script where error handling is used is inside the print_
 
 ## Menu Script: Custom Error Classes
 The script also contains a few custom error classes for errors that are explicitly raised in the main code body section **(Figure 5)**:
- 
-![Figure 5](pictures/5%20-%20Custom%20Error%20Classes.png "Figure 5")  
+
+```python
+class UserCancelledNewFileCreation(Exception):
+    pass
+
+
+class InvalidUserMenuChoice(Exception):
+    pass
+
+
+class InvalidSaveChoice(Exception):
+    pass
+```
 ***Figure 5* – Custom error classes for better identification of custom errors**
 
 As you can see in **Figure 6**, these classes can be visually helpful for other individuals editing the code to see what the specific error being raised is related to:
@@ -68,7 +79,6 @@ As you can see in **Figure 6**, these classes can be visually helpful for other 
     except InvalidUserMenuChoice:  # if invalid choice, let the user know
         print("Please enter a valid choice [1-5].")
 ```
-![Figure 6](pictures/6%20-%20Custom%20Error%20Classes%20in%20action.png "Figure 6")  
 ***Figure 6* – Using the custom error classes to raise errors in the main code body**
 
 ## Menu Script: Running the Script

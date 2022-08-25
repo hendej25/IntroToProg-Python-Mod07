@@ -39,7 +39,35 @@ The script also contains a few custom error classes for errors that are explicit
 ***Figure 5* – Custom error classes for better identification of custom errors**
 
 As you can see in **Figure 6**, these classes can be visually helpful for other individuals editing the code to see what the specific error being raised is related to:
+```python
+            while True:  # prompt user to save the menu to the file or not
+                try:
+                    choice_str = IO.input_yes_no_choice("Are you sure you want to reload the last saved menu? (y/n) - ")
+                    if choice_str == "y":
+                        menu_lst, status_str = PickleJuice.read_data_from_file(MENU_FILE_STR)
+                        IO.input_press_to_continue(status_str)
+                        break
+                    elif choice_str == "n":
+                        IO.input_press_to_continue("File reload cancelled!")
+                        break
+                    else:
+                        raise InvalidSaveChoice("Invalid choice")
 
+                except InvalidSaveChoice as e:
+                    print("Please enter a valid choice ('y' to save, 'n' to cancel).")
+
+            continue  # to show the user menu
+
+        elif choice_str == '5':  # Exit Program
+            print("Goodbye!")
+            break  # and exit
+
+        else:  # prompt the user for a valid menu choice if an invalid choice was entered
+            raise InvalidUserMenuChoice("Invalid menu choice.")
+
+    except InvalidUserMenuChoice:  # if invalid choice, let the user know
+        print("Please enter a valid choice [1-5].")
+```
 ![Figure 6](pictures/6%20-%20Custom%20Error%20Classes%20in%20action.png "Figure 6")  
 ***Figure 6* – Using the custom error classes to raise errors in the main code body**
 
